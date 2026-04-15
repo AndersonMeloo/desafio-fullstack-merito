@@ -10,7 +10,7 @@ import {
 } from 'class-validator';
 
 export class CreateTransactionDto {
-  @IsUUID(4, { message: 'O identificador do fundo deve ser um UUID válido' })
+  @IsUUID('4', { message: 'O identificador do fundo deve ser um UUID válido' })
   fundId!: string;
 
   @IsEnum(TransactionType, {
