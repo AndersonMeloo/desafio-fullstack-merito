@@ -1,0 +1,37 @@
+POST /api/funds
+http://localhost:3000/api/funds
+{
+  "name": "Fundo BTG",
+  "ticker": "BBTG11",
+  "type": "Renda Fixa",
+  "pricePerShare": 95.75
+}
+
+GET /api/funds
+http://localhost:3000/api/funds
+
+POST api/transactions (APORTE) 
+http://localhost:3000/api/transactions
+
+id: Retornado do:
+Post: /api/funds ou Get: /api/funds
+Exemplo: "id": "a06e0bec-09fb-4fc8-8ba0-681b7c359b37",
+{
+  "fundId": "a06e0bec-09fb-4fc8-8ba0-681b7c359b37",
+  "type": "APORTE",
+  "amount": 1000
+}
+
+GET /api/transactions
+http://localhost:3000/api/transactions
+
+POST /api/transactions (RESGATE)
+http://localhost:3000/api/transactions
+{
+  "fundId": "a06e0bec-09fb-4fc8-8ba0-681b7c359b37",
+  "type": "RESGATE",
+  "amount": 500
+}
+
+GET /api/wallet/summary
+http://localhost:3000/api/wallet/summary
