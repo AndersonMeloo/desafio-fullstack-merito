@@ -71,32 +71,31 @@ Se quiser apontar o frontend para outro backend, defina VITE_API_BASE_URL. Quand
 - Registro de movimentações de aporte e resgate.
 - Cálculo de cotas e saldo por fundo.
 - Resumo consolidado da carteira.
-- Limpeza em massa de fundos e movimentações para ambiente de teste.
+- Limpeza em massa de fundos e movimentações para ambiente de teste. Funciona somente em Postman, Insomnia e etc..
 
 ## Rotas da API
-
 ### Fundos
 
 - POST /api/funds
 - GET /api/funds
-- PUT /api/funds/:id
-- DELETE /api/funds
+- PUT /api/funds/:id Funciona somente em Postman, Insomnia e etc..
+- DELETE /api/funds Funciona somente em Postman, Insomnia e etc..
 
 Exemplo de criação:
 
 ```json
 {
-  "name": "Fundo BTG",
-  "ticker": "BBTG11",
-  "type": "Renda Fixa",
-  "pricePerShare": 95.75
+  "name": "Fundo de Papel, Tijolo, Híbrido e etc..",
+  "ticker": "MFII11",
+  "type": "FISS, Ações e etc",
+  "pricePerShare": 67,96
 }
 ```
 
 ### Movimentações
-
+Funciona somente em Postman, Insomnia e etc..
 - POST /api/transactions
-- GET /api/transactions
+- GET /api/transactions 
 - DELETE /api/transactions
 
 Exemplo de aporte:
