@@ -2,7 +2,7 @@
 
 ## Visão geral
 
-- Backend em NestJS com Prisma e PostgreSQL.
+- Backend em NestJS, TypeScript com Prisma e PostgreSQL.
 - Frontend em React + Vite na pasta [frontend](frontend).
 - API com prefixo global em http://localhost:3000/api.
 - Validação de entrada com mensagens em português.
