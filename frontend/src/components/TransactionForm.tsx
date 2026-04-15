@@ -19,7 +19,7 @@ export function TransactionForm({
     const normalizedAmount = form.amount.replace(',', '.')
     const parsedAmount = Number(normalizedAmount)
     const selectedFund = funds.find((f) => f.id === form.fundId)
-    const estimatedShares = selectedFund && Number.isFinite(parsedAmount)
+    const estimatedShares = selectedFund && parsedAmount > 0 && Number.isFinite(parsedAmount)
         ? Math.round(parsedAmount / selectedFund.pricePerShare)
         : null
 
@@ -84,7 +84,7 @@ export function TransactionForm({
                         />
                     </label>
 
-                    {selectedFund && estimatedShares && (
+                    {selectedFund && estimatedShares !== null && estimatedShares > 0 && (
                         <div style={{ padding: '10px', backgroundColor: '#000', borderRadius: '4px', marginTop: '10px' }}>
                             <strong>Previsão:</strong> R$ {parsedAmount.toFixed(2)} ÷ R$ {selectedFund.pricePerShare.toFixed(2)} = <strong>{estimatedShares} cotas</strong>
                         </div>
